@@ -1,9 +1,9 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/App.tsx',
+  entry: './src/index.tsx',
   output: {
-    filename: 'app1.js',
+    filename: 'index.js',
     library: 'app1',
     libraryTarget: 'umd'
   },

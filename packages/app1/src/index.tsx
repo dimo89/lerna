@@ -5,7 +5,6 @@ interface App1Props {
 };
 
 class App1 extends React.Component<App1Props, {}> {
-
   render() {
     const { title } = this.props;
 
