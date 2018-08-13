@@ -11,6 +11,8 @@
     "suppressImplicitAnyIndexErrors": true
   },
   "compileOnSave": false,
+  "no-any": false,
+  "strictNullChecks": false,
   "exclude": [
     "node_modules"
   ]

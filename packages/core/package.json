@@ -17,7 +17,8 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "typescript": "^3.0.1",
-    "webpack": "^4.16.5"
+    "webpack": "^4.16.5",
+    "react-router-dom": "^4.3.1"
   },
   "keywords": [],
   "author": "",
