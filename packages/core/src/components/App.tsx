@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { Switch, Route, Link } from 'react-router-dom'
 import withTheme from '../withTheme';
 import LeftMenu from './leftMenu/LeftMenu';
+import App1 from 'app1';
 
 const Home: React.SFC<{}> = () => (
   <Typography>{'Home'}</Typography>
@@ -52,7 +53,7 @@ class App extends React.Component<AppProps, {}> {
           <div className={classes.toolbar} />
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/about" component={About} />
+              <Route path="/about" component={App1} />
             </Switch>
         </main>
       </div>
