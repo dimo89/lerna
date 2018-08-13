@@ -2,11 +2,13 @@
   "name": "app1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/app1.js",
+  "types": "./dist/app1.d.ts",
   "scripts": {
     "start": "webpack-dev-server  --mode development --inline --hot --open",
     "build": "webpack  --mode development",
     "prod": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define(["react"], factory);
 	else if(typeof exports === 'object')
-		exports["app1"] = factory(require("react"));
+		exports["app2"] = factory(require("react"));
 	else
-		root["app1"] = factory(root["react"]);
+		root["app2"] = factory(root["react"]);
 })(window, function(__WEBPACK_EXTERNAL_MODULE_react__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -104,7 +104,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\n\n;\n\nvar App1 = function (_React$Component) {\n    _inherits(App1, _React$Component);\n\n    function App1() {\n        _classCallCheck(this, App1);\n\n        return _possibleConstructorReturn(this, (App1.__proto__ || Object.getPrototypeOf(App1)).apply(this, arguments));\n    }\n\n    _createClass(App1, [{\n        key: \"render\",\n        value: function render() {\n            var title = this.props.title;\n\n            return react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", null, title, \" served from App1\");\n        }\n    }]);\n\n    return App1;\n}(react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"]);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (App1);\n\n//# sourceURL=webpack://app1/./src/App.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar App2 = function App2(_ref) {\n    var title = _ref.title;\n\n    return react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"](\"div\", null, title, \" served from App2\");\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (App2);\n\n//# sourceURL=webpack://app2/./src/App.tsx?");
 
 /***/ }),
 
@@ -115,7 +115,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = __WEBPACK_EXTERNAL_MODULE_react__;\n\n//# sourceURL=webpack://app1/external_%22react%22?");
+eval("module.exports = __WEBPACK_EXTERNAL_MODULE_react__;\n\n//# sourceURL=webpack://app2/external_%22react%22?");
 
 /***/ })
 

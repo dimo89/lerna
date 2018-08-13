@@ -5,14 +5,7 @@ import { Switch, Route, Link } from 'react-router-dom'
 import withTheme from '../withTheme';
 import LeftMenu from './leftMenu/LeftMenu';
 import App1 from 'app1';
-
-const Home: React.SFC<{}> = () => (
-  <Typography>{'Home'}</Typography>
-);
-
-const About: React.SFC<{}> = () => (
-  <Typography>{'About'}</Typography>
-);
+import App2 from 'app2';
 
 interface AppProps {
   classes: any;
@@ -52,8 +45,8 @@ class App extends React.Component<AppProps, {}> {
         <main className={classes.content}>
           <div className={classes.toolbar} />
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/about" component={App1} />
+              <Route exact path="/" component={() => <App1 title="Home"/>} />
+              <Route path="/about" component={() => <App2 title="About" />} />
             </Switch>
         </main>
       </div>
