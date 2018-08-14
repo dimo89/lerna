@@ -44,8 +44,8 @@ class App extends React.Component<AppProps, {}> {
         <main className={classes.content}>
           <div className={classes.toolbar} />
             <Switch>
-              <Route exact path="/" component={() => <App1 title="Home"/>} />
-              <Route path="/about" component={() => <App2 title="About" />} />
+              <Route exact path="/" component={() => <App1 title="Service 1"/>} />
+              <Route path="/about" component={() => <App2 title="Service 2" />} />
             </Switch>
         </main>
       </div>

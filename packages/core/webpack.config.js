@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const basePath = __dirname;
 
@@ -21,7 +22,7 @@ module.exports = {
     contentBase: './dist', // Content base
     inline: true, // Enable watch and live reload
     host: 'localhost',
-    port: 8080,
+    port: 3000,
     stats: 'errors-only',
     historyApiFallback: true,
   },
@@ -50,5 +51,6 @@ module.exports = {
       template: 'index.html', //Name of template in ./src
       hash: true,
     }),
+    new BundleAnalyzerPlugin(),
   ],
 };
