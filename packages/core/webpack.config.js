@@ -5,6 +5,22 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack-plugin");
 const basePath = __dirname;
 
+let plugins = [
+  new HtmlWebpackPlugin({
+    filename: 'index.html', //Name of file in ./dist/
+    template: 'index.html', //Name of template in ./src
+    hash: true,
+  })
+];
+
+if(process.env.NODE_ENV === 'production') {
+  plugins = [
+    ...plugins,
+    new BundleAnalyzerPlugin(),
+    new DuplicatePackageCheckerPlugin(),
+  ];
+};
+
 module.exports = {
   context: path.join(basePath, "src"),
   resolve: {
@@ -27,7 +43,7 @@ module.exports = {
     contentBase: './dist', // Content base
     inline: true, // Enable watch and live reload
     host: 'localhost',
-    port: 8080,
+    port: 3000,
     stats: 'errors-only',
     historyApiFallback: true,
   },
@@ -88,13 +104,5 @@ module.exports = {
     //   }
     // }
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: 'index.html', //Name of file in ./dist/
-      template: 'index.html', //Name of template in ./src
-      hash: true,
-    }),
-    new BundleAnalyzerPlugin(),
-    new DuplicatePackageCheckerPlugin()
-  ],
+  plugins: plugins,
 };
