@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {withStyles, createStyles, Theme} from '@material-ui/core/styles';
-import { Switch, Route, Link } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import withTheme from '../withTheme';
 import LeftMenu from './leftMenu/LeftMenu';
 import App1 from 'app1';
