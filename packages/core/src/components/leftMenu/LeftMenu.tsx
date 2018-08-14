@@ -1,6 +1,8 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import {withStyles, createStyles, Theme} from '@material-ui/core/styles';
+import withStyles from '@material-ui/core/styles/withStyles';
+import createStyles from '@material-ui/core/styles/createStyles';
+import { Theme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';

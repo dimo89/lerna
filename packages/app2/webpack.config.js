@@ -5,7 +5,7 @@ module.exports = {
   output: {
     filename: 'app2.js',
     library: 'app2',
-    libraryTarget: 'umd'
+    libraryTarget: 'amd'
   },
   mode: 'development',
   resolve: {

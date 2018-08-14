@@ -1,7 +1,8 @@
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack-plugin");
 const basePath = __dirname;
 
 module.exports = {
@@ -9,6 +10,11 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.ts', '.tsx'],
     symlinks: false,
+    alias: {
+      react: path.resolve(__dirname, "node_modules/react"),
+      'react-dom': path.resolve(__dirname, "node_modules/react-dom"),
+      'history': path.resolve(__dirname, "node_modules/history")
+    },
   },
   entry: ['./index.tsx'],
   output: {
@@ -25,6 +31,7 @@ module.exports = {
     stats: 'errors-only',
     historyApiFallback: true,
   },
+  
   module: {
     rules: [
       {
@@ -44,11 +51,50 @@ module.exports = {
       },
     ],
   },
+  optimization: {
+    nodeEnv: process.env.NODE_ENV,
+    // splitChunks: {
+    //   chunks: 'all',
+    //   cacheGroups: {
+    //     app1: {
+    //       chunks: 'async',
+    //       name: 'app1',
+    //       test: /app1/,
+    //       priority: 100,
+    //       enforce: true,
+    //     },
+    //     app2: {
+    //       chunks: 'async',
+    //       name: 'app2',
+    //       test: /app2/,
+    //       priority: 100,
+    //       enforce: true,
+    //     },
+    //     framework: {
+    //       chunks: 'all',
+    //       name: 'framework',
+    //       test: /[\\/](react|react-dom|history|react-router-dom)[\\/]/,
+    //       priority: 22,
+    //       enforce: true,
+    //     },
+    //     vendor: {
+    //       chunks: 'all',
+    //       name: 'vendor',
+    //       test: /node_modules/,
+    //       priority: 10,
+    //       enforce: true,
+    //     },
+        
+    //   }
+    // }
+  },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html', //Name of file in ./dist/
       template: 'index.html', //Name of template in ./src
       hash: true,
     }),
+    new BundleAnalyzerPlugin(),
+    new DuplicatePackageCheckerPlugin()
   ],
 };
