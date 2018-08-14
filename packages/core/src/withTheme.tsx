@@ -5,10 +5,10 @@ import green from '@material-ui/core/colors/green';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 const theme = createMuiTheme({
-  palette: {
-    primary: purple,
-    secondary: green,
-  },
+  // palette: {
+  //   primary: purple,
+  //   secondary: green,
+  // },
 });
 
 function withTheme(Component: React.ComponentType) {
